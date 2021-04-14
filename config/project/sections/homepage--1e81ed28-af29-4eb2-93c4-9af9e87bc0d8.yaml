@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: homepage
+name: Homepage
+propagationMethod: all
+siteSettings:
+  00849864-7026-4356-a68a-4787547a8d4f: # Rayco Haex Portfolio
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/home/_entry
+    uriFormat: __home__
+type: single

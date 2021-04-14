@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+    <meta name="description" content="Rayco Haex Fullstack Webdeveloper Portfolio">
+    <meta name="author" content="Rayco Haex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+    {% css "/assets/css/style.css" %}
+
+</head>
+
+<body>
+    {% block body %}
+
+    {% endblock %}
+  <script src="js/scripts.js"></script>
+</body>
+</html>

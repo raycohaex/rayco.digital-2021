@@ -1,0 +1,68 @@
+field: 2ae74265-589e-4f86-98b7-1721b159641c # Skills
+fieldLayouts:
+  34aa8d98-020e-4435-8431-ae5f23e2817b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b425756f-8f04-417a-80b8-750a0ca50a9b # Skill title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 028b4e6d-333a-4dd6-9cde-7ea6bd048976 # Skill description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+        name: Content
+        sortOrder: 1
+fields:
+  028b4e6d-333a-4dd6-9cde-7ea6bd048976: # Skill description
+    contentColumnType: text
+    fieldGroup: null
+    handle: skillDescription
+    instructions: ''
+    name: 'Skill description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'HTML, CSS, and JS'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b425756f-8f04-417a-80b8-750a0ca50a9b: # Skill title
+    contentColumnType: text
+    fieldGroup: null
+    handle: skillTitle
+    instructions: ''
+    name: 'Skill title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: Front-end
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: matrixSkill
+name: matrixSkill
+sortOrder: 1

@@ -1,0 +1,27 @@
+dateModified: 1618423018
+email:
+  fromEmail: raycoh1299@gmail.com
+  fromName: 'Rayco Haex Portfolio'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.1
+system:
+  edition: solo
+  live: true
+  name: 'Rayco Haex Portfolio'
+  retryDuration: null
+  schemaVersion: 3.6.8
+  timeZone: Europe/Amsterdam
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

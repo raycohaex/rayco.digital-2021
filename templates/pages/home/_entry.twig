@@ -1,0 +1,12 @@
+{% extends "layouts/_base.twig" %}
+
+{% block body %}
+{% set blocks = entry.skills.all() %}
+{% if blocks|length %}
+    <ul>
+        {% for block in blocks %}
+            {{block.skillTitle}}
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

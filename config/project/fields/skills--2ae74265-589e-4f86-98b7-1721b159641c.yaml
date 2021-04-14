@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 6cc8fc5e-d643-44b6-ad53-be00a2eef5e9 # skills
+handle: skills
+instructions: ''
+name: Skills
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_skills}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
