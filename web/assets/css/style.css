@@ -1,3 +1,323 @@
+/*
+* Colors
+*/
+/*
+* Fonts
+*/
+/*
+* Font sizes
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  box-sizing: border-box;
+}
+
 body {
-  background: #45c059;
+  font-size: 1.75rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #0C0C0C;
+  background: #fff;
+}
+
+*::-moz-selection {
+  color: #fff;
+  background: #2664DF;
+}
+
+*::selection {
+  color: #fff;
+  background: #2664DF;
+}
+
+a {
+  text-decoration: none;
+  color: #2664DF;
+  cursor: pointer;
+}
+
+a:hover, a:visited, a:active, a:focus {
+  color: #2664DF;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2px;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.flex-50 {
+  flex: 50% 0;
+}
+
+.flex-25 {
+  flex: 25% 0;
+}
+
+.flex-10 {
+  flex: 10% 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.section {
+  margin: 0 13rem;
+}
+
+.section.section--light {
+  border-left: 5px solid rgba(12, 12, 12, 0.08);
+  border-right: 5px solid rgba(12, 12, 12, 0.08);
+}
+
+.section.section--dark {
+  border-left: 5px solid rgba(255, 255, 255, 0.08);
+  border-right: 5px solid rgba(255, 255, 255, 0.08);
+}
+
+.anti-section {
+  position: relative;
+}
+
+.anti-section::after {
+  content: '';
+  pointer-events: none;
+  width: calc(100% - (26rem + 10px));
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 13rem;
+  z-index: -1;
+}
+
+.anti-section.anti-section--light::after {
+  border-left: 5px solid rgba(12, 12, 12, 0.08);
+  border-right: 5px solid rgba(12, 12, 12, 0.08);
+}
+
+.anti-section.anti-section--dark::after {
+  border-left: 5px solid rgba(255, 255, 255, 0.08);
+  border-right: 5px solid rgba(255, 255, 255, 0.08);
+}
+
+.entry-content {
+  height: 150px;
+}
+
+.anti-section__1-2 {
+  flex: 1;
+  display: flex;
+}
+
+.anti-section__3 {
+  width: 13rem;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 25px;
+  position: relative;
+}
+
+.container.container--no-padding {
+  padding: unset;
+}
+
+.container.container--no-column {
+  flex-direction: row;
+}
+
+.container p {
+  max-width: 75ch;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    max-width: 840px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.site-menu {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  z-index: 5;
+  pointer-events: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.site-menu #site-logo {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: #0C0C0C;
+  pointer-events: all;
+  font-weight: 700;
+}
+
+.site-menu .navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.site-menu .navbar .navbar__left,
+.site-menu .navbar .navbar__right {
+  width: 13rem;
+}
+
+.site-menu .navbar .navbar__center {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-menu .navbar .navbar__center .navbar-links {
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+}
+
+.site-menu .navbar .navbar__center .navbar-links li {
+  margin: 0 2.5rem 0 0;
+}
+
+.site-menu .navbar .navbar__center .navbar-links li a {
+  color: #0C0C0C;
+  pointer-events: all;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 15px 10px;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn.btn--pop {
+  background-color: #2664DF;
+  color: #fff;
+  transition: background-color 80ms;
+}
+
+.btn.btn--pop:hover, .btn.btn--pop:active, .btn.btn--pop:focus {
+  background-color: #1c53c0;
+}
+
+.jumbo-text {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.block-text strong {
+  font-weight: 600;
+}
+
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 20px;
+}
+
+.section p {
+  font-size: 1.25rem;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper#image-amsterdam-homepage {
+  width: 70%;
+  height: 400px;
+  display: flex;
+  margin: 5.5rem 0 5.5rem auto;
+}
+
+.image-wrapper:after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  left: 0;
+  top: 0;
+}
+
+.image-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  mix-blend-mode: luminosity;
+  width: 100%;
+  height: 100%;
+}
+
+.job-experience {
+  margin: 0 7rem;
+}
+
+.job-experience .sub-slogan {
+  font-size: 1.25rem;
+}
+
+.job-experience .achievement-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.125rem;
+}
+
+.job-experience .achievement-section .achievement-section__achievement {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-experience .achievement-section .achievement-section__achievement .achievement-section__achievement__year {
+  color: #2664DF;
+  font-size: 3.125rem;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+}
+
+.job-experience .achievement-section .achievement-section__achievement .achievement-section__achievement__description {
+  font-size: 1.25rem;
+  max-width: 6rem;
+}
+
+#intro-text {
+  margin-left: 7rem;
 }

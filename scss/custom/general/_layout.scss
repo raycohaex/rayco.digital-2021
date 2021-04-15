@@ -1,0 +1,81 @@
+.section {
+    margin: 0 13rem;
+    &.section--light {
+        border-left: 5px solid rgba($dark, 0.08);
+        border-right: 5px solid rgba($dark, 0.08);
+    }
+    &.section--dark {
+        border-left: 5px solid rgba($white, 0.08);
+        border-right: 5px solid rgba($white, 0.08);
+    }
+}
+
+.anti-section {
+    position: relative;
+    &::after{ 
+        content: '';
+        pointer-events: none;
+        width: calc(100% - (26rem + 10px));
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 13rem;
+        z-index: -1;
+    }
+    &.anti-section--light {
+        &::after{
+            border-left: 5px solid rgba($dark, 0.08);
+            border-right: 5px solid rgba($dark, 0.08);
+        }
+    }
+    &.anti-section--dark {
+        &::after{
+        border-left: 5px solid rgba($white, 0.08);
+        border-right: 5px solid rgba($white, 0.08);
+        }
+    }
+}
+
+.entry-content {
+    height: 150px;
+}
+
+.anti-section__1-2 {
+    flex: 1;
+    display: flex;
+}
+
+.anti-section__3 {
+    width: 13rem;
+    display: flex;
+}
+
+.container {
+    @include flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+    &.container--no-padding {
+        padding: unset;
+    }
+    &.container--no-column {
+        flex-direction: row;
+    }
+    p {
+        max-width: 75ch;
+    }
+}
+
+@include s-desktop {
+    .container {
+        max-width: 840px;
+    }
+}
+
+@include mobile {
+    .container {
+        max-width: 100%;
+    }
+}

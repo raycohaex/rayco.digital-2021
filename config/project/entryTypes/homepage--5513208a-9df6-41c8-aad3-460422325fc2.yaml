@@ -27,6 +27,33 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: 4e9cfb3f-03ad-421b-9183-eaa3e2de85c0 # slogan
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4bcbad3f-b700-437c-8c42-187195aca859 # Slogan sub
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bc26c475-1a2a-49f9-9f85-9ca7d27a4cf3 # About me
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 2ae74265-589e-4f86-98b7-1721b159641c # Skills
             instructions: null
             label: null

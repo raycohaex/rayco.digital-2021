@@ -1,0 +1,57 @@
+@mixin flex {
+    display: -webkit-flex;
+    display: flex;
+}
+
+// Breakpoints
+@mixin mobile() {
+    @media only screen and (max-width: 640px) {
+        @content;
+    }
+}
+
+@mixin s-desktop() {
+    @media only screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin l-desktop() {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Special link hover
+@mixin href-hover {
+    color: $pop;
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: '';
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: $pop;
+        transition: width 60ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: -1;
+    }
+    &:hover {
+        color: $white;
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+@mixin href-unstyled {
+    color: $dark;
+}

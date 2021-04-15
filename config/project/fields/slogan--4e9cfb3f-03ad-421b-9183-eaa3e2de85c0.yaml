@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: b7e125b5-8743-49f6-8fed-8e3e5c2062e7 # pages
+handle: slogan
+instructions: ''
+name: slogan
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

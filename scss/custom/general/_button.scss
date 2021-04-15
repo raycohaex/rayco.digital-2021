@@ -1,0 +1,17 @@
+.btn {
+    padding: 15px 10px;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    &.btn--pop {
+        background-color: $pop;
+        color: $white;
+        transition: background-color 80ms;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken($pop, 8%);
+        }
+    }
+
+}

@@ -1,12 +1,55 @@
 {% extends "layouts/_base.twig" %}
+{# query #}
+{% set entry = craft.entries.section('homepage').one() %}
 
 {% block body %}
-{% set blocks = entry.skills.all() %}
-{% if blocks|length %}
-    <ul>
-        {% for block in blocks %}
-            {{block.skillTitle}}
-        {% endfor %}
-    </ul>
-{% endif %}
+<div class="entry-content section section--light">
+</div>
+<section class="anti-section anti-section--light overflow-hidden">
+    <div class="container container--no-padding container--no-column">
+        <div class="anti-section__1-2" id="intro-text">
+            <h1 class="jumbo-text flex-50">{{entry.slogan}}</h1>
+            <div class="job-experience">
+            <div class="achievement-section">
+                <div class="achievement-section__achievement">
+                    <span class="achievement-section__achievement__year">2</span>
+                    <span class="achievement-section__achievement__description">years of experience</span>
+                </div>
+                <div class="achievement-section__achievement">
+                    <span class="achievement-section__achievement__year">11</span>
+                    <span class="achievement-section__achievement__description">websites built</span>
+                </div>
+                <div class="achievement-section__achievement">
+                    <span class="achievement-section__achievement__year">2</span>
+                    <span class="achievement-section__achievement__description">webapps built</span>
+                </div>
+            </div>
+            <div class="sub-slogan block-text">
+                {{entry.sloganSub}}
+            </div>
+            </div>
+        </div>
+        <div class="anti-section__3">
+            <a href="#" class="btn btn--pop margin-auto">Work <svg viewBox="0 0 24 24" class="icon icon__chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+        </div>
+        
+    </div>
+</section>
+<section class="anti-section anti-section--light overflow-hidden">
+    <div class="image-wrapper" id="image-amsterdam-homepage">
+        <img src="{{ alias('@web') }}/assets/images/amsterdam.jpg" alt="Amsterdam Homepage Image">
+    </div>
+</section>
+<section class="section section--light">
+    <div class="container">
+        <h2>About Me</h2>
+        {{entry.aboutMe}}
+    </div>
+</section>
+<section class="section section--light">
+    <div class="container">
+        <h2>My Fullstack Skillset</h2>
+        {{entry.aboutMe}}
+    </div>
+</section>
 {% endblock %}

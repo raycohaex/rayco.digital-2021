@@ -1,0 +1,26 @@
+.job-experience {
+    margin: 0 7rem;
+    .sub-slogan {
+        font-size: $smallbody;
+    }
+    .achievement-section {
+        @include flex;
+        justify-content: space-between;
+        margin-bottom: 3.125rem;
+        .achievement-section__achievement {
+            display: flex;
+            flex-direction: column;
+            .achievement-section__achievement__year {
+                color: $pop;
+                font-size: $heading;
+                font-weight: 800;
+                font-family: $primaryfont;
+            }
+            .achievement-section__achievement__description {
+                font-size: $smallbody;
+                max-width: 6rem;
+            }
+        }
+    }
+}
+
