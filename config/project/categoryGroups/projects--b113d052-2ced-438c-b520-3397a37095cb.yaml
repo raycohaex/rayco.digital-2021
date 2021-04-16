@@ -1,0 +1,40 @@
+fieldLayouts:
+  f79a455b-3a89-4117-989b-93b7e033d398:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: projects
+name: projects
+siteSettings:
+  00849864-7026-4356-a68a-4787547a8d4f: # Rayco Haex Portfolio
+    hasUrls: true
+    template: null
+    uriFormat: 'projects/{slug}'
+structure:
+  maxLevels: null
+  uid: 9b7b254a-bee7-480b-a37c-d1e3ef7b46e3

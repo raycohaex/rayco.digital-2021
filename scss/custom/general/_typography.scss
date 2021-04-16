@@ -24,6 +24,14 @@
     }
     p {
         font-size: $smallbody;
+        line-height: #{$smallbody * 1.54};
+    }
+
+    h2 {
+        font-size: $heading;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        max-width: 50%;
     }
 
 }

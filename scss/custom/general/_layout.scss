@@ -7,6 +7,7 @@
     &.section--dark {
         border-left: 5px solid rgba($white, 0.08);
         border-right: 5px solid rgba($white, 0.08);
+        color: $white;
     }
 }
 
@@ -35,6 +36,10 @@
         border-right: 5px solid rgba($white, 0.08);
         }
     }
+}
+
+.section-wrapper--dark {
+    background-color: $dark;
 }
 
 .entry-content {

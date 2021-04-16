@@ -1,0 +1,26 @@
+.contact-options {
+    display: flex;
+    .contact-options__option {
+        h3 {
+            font-size: $smallbody;
+            color: rgba($white, 0.4);
+            width: 20ch;
+            font-family: $primaryfont;
+        }
+        .contact-options__option__phone {
+            font-size: $smallbody;
+            font-family: $blockfont;
+            font-weight: 500;
+            margin-bottom: 10px;
+            @include flex;
+            align-items: center;
+        }
+        .contact-options__option__mail {
+            font-size: $smallbody;
+            font-family: $blockfont;
+            font-weight: 500;
+            @include flex;
+            align-items: center;
+        }
+    }
+}

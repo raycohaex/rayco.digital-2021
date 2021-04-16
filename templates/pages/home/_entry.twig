@@ -49,7 +49,26 @@
 <section class="section section--light">
     <div class="container">
         <h2>My Fullstack Skillset</h2>
-        {{entry.aboutMe}}
+        {% if entry.skills|length %} 
+            <div class="skills">
+            {% for block in entry.skills.type('matrixSkill') %}
+                <div class="skills__skill">
+                    <div class="skills__skill__skill-index">0{{loop.index}}/</div>
+                    <div class="skills__skill__content">
+                        <h3>{{ block.skillTitle }}</h3>
+                        <p>{{ block.skillDescription }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
     </div>
 </section>
+<section class="section section--light">
+    <div class="container">
+        <h2>Projects I'm especially proud of!</h2>
+        wip
+    </div>
+</section>
+
 {% endblock %}

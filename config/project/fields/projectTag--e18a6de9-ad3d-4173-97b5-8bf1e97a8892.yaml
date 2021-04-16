@@ -1,23 +1,22 @@
 contentColumnType: string
 fieldGroup: c5025c67-2da7-4194-9ccc-8e4660bd4118 # project
-handle: projectCategory
+handle: projectTag
 instructions: ''
-name: 'Project category'
+name: 'Project tag'
 searchable: false
 settings:
   allowLimit: false
   allowMultipleSources: false
   allowSelfRelations: false
-  branchLimit: ''
   limit: null
   localizeRelations: false
   selectionLabel: ''
-  showSiteMenu: true
-  source: 'group:b113d052-2ced-438c-b520-3397a37095cb' # projects
+  showSiteMenu: false
+  source: 'taggroup:e60460af-22e7-4477-874b-658d36840729' # Featured
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Categories
+type: craft\fields\Tags

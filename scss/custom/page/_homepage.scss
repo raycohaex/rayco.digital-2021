@@ -24,3 +24,26 @@
     }
 }
 
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    .skills__skill {
+        flex: 50% 0;
+        @include flex;
+        margin-bottom: 1.75rem;
+        padding-right: 3rem;
+    .skills__skill__skill-index {
+        font-family: $primaryfont;
+        font-size: $smallheading;
+        font-weight: 600;
+        color: rgba($dark, 0.3);
+        margin-right: 1.5rem;
+        flex: 3ch 0 0;
+    }
+    .skills__skill__content{
+        h3 {
+            font-size: $smallheading;
+        }
+    }
+    }
+}

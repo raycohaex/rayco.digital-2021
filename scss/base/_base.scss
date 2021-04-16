@@ -32,13 +32,27 @@ a {
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2px;
     stroke-linecap: square;
-    stroke-linejoin: miter;    
+    stroke-linejoin: miter; 
+    &.icon--light { 
+        color: $white;
+    }
+    &.icon--margin-right {
+        margin-right: 0.9rem;
+    }
+    &.icon--fill 
+    {
+        fill: $dark;
+        stroke: none;
+    }
+    &.icon--fill.icon--light {
+        fill: rgba($white, 0.5);
+    }
 }
 
 .margin-auto {

@@ -9,17 +9,17 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
-  defaultUploadLocationSource: ''
-  defaultUploadLocationSubpath: /project
+  defaultUploadLocationSource: 'volume:391df726-69a9-45b1-b5bc-38e31475940b' # Project images
+  defaultUploadLocationSubpath: ''
   limit: ''
   localizeRelations: false
   previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Project image thumbnail'
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: ''
+  singleUploadLocationSource: 'volume:391df726-69a9-45b1-b5bc-38e31475940b' # Project images
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'
