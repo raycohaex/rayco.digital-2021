@@ -12,7 +12,25 @@
         </ul>
     </div>
     <div class="navbar__right">
-        =
+        <div class="navbar__right__menu-icon">=</div>
     </div>
     </nav>
+    <ul class="language-options">
+{% for site in currentSite.group.sites %}
+    <li class="{% if currentSite.id == site.id %} is-active{% endif %}">
+    {% set url = alias(site.baseUrl) %}
+    {% if entry is defined %}
+        {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}
+        {% if entryForOtherSite %}
+        {% set url = entryForOtherSite.getUrl() %}
+        {% endif %}
+    {% endif %}
+    {% if site.language == "en-US" %}
+    <a href="{{ url }}">{{ 'en' }}</a>
+    {% else %}
+    <a href="{{ url }}">{{ site.language }}</a>
+    {% endif %}
+    </li>
+{% endfor %}
+</ul>
 </header>

@@ -1,0 +1,14 @@
+{% extends "layouts/_base.twig" %}
+{# query #}
+{% set section = entry.getSection() %}
+{% set entry = craft.entries.section(section).one() %}
+{% set tag = craft.tags.search('featured').one() %}
+
+{% block body %}
+<div class="entry-content section section--light">
+</div><!-- Filler -->
+hi
+<div class="entry-content section section--light">
+</div><!-- Filler -->
+
+{% endblock %}

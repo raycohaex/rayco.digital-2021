@@ -1,9 +1,9 @@
 enableVersioning: true
-handle: homepage
-name: Homepage
+handle: homepageEn
+name: Home
 propagationMethod: all
 siteSettings:
-  0ec2446b-1221-435c-9e4e-be3c4324d931: # Rayco Haex Portfolio - nl
+  00849864-7026-4356-a68a-4787547a8d4f: # Rayco Haex Portfolio
     enabledByDefault: true
     hasUrls: true
     template: pages/home/_entry

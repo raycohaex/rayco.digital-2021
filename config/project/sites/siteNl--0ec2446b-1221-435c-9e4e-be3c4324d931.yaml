@@ -1,0 +1,9 @@
+baseUrl: '@web/nl/'
+enabled: true
+handle: siteNl
+hasUrls: true
+language: nl
+name: 'Rayco Haex Portfolio - nl'
+primary: false
+siteGroup: 826b69bf-5b92-46ff-9cfb-3546c5bc2a6d # Rayco Haex Portfolio
+sortOrder: 2
