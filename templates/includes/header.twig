@@ -4,12 +4,14 @@
         <a href="/" id="site-logo">Rayco Haex</a>
     </div>
     <div class="navbar__center">
+        {% if entry.uri == "__home__" %}
         <ul class="navbar-links">
             <li><a href="#sectionabout">About me</a></li>
             <li><a href="#sectionskills">Skills</a></li>
             <li><a href="#sectioncases">Cases</a></li>
             <li><a href="#sectioncontact">Contact</a></li>
         </ul>
+        {% endif %}
     </div>
     <div class="navbar__right">
         <div class="navbar__right__menu-icon">=</div>

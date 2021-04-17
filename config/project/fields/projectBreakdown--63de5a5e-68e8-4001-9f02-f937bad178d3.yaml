@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: c5025c67-2da7-4194-9ccc-8e4660bd4118 # project
+handle: projectBreakdown
+instructions: ''
+name: 'Project breakdown'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_projectbreakdown}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

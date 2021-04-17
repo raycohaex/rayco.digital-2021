@@ -1,0 +1,105 @@
+field: 63de5a5e-68e8-4001-9f02-f937bad178d3 # Project breakdown
+fieldLayouts:
+  ac5d6307-10cd-4778-aa8b-1bbc271d0855:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f0073052-096d-468c-be02-65aaeb7c3379 # Image title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+          -
+            fieldUid: b9fa061d-b619-4500-8502-cc02fe76836c # Dark section
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: e0c36bce-c8cc-4eb2-b330-116ff2f3f4cb # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  b9fa061d-b619-4500-8502-cc02fe76836c: # Dark section
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: one_darkSection
+    instructions: ''
+    name: 'Dark section'
+    searchable: false
+    settings:
+      default: false
+      offLabel: Dark
+      onLabel: Light
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  e0c36bce-c8cc-4eb2-b330-116ff2f3f4cb: # Image
+    contentColumnType: string
+    fieldGroup: null
+    handle: one_imageAsset
+    instructions: ''
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:391df726-69a9-45b1-b5bc-38e31475940b' # Project images
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:391df726-69a9-45b1-b5bc-38e31475940b' # Project images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  f0073052-096d-468c-be02-65aaeb7c3379: # Image title
+    contentColumnType: text
+    fieldGroup: null
+    handle: one_imageTitle
+    instructions: ''
+    name: 'Image title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: largeImage
+name: 'Large image'
+sortOrder: 1

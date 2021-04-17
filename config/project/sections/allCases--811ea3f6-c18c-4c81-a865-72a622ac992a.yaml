@@ -1,16 +1,16 @@
 enableVersioning: true
-handle: cases
-name: Cases
+handle: allCases
+name: 'All Cases'
 propagationMethod: all
 siteSettings:
   0ec2446b-1221-435c-9e4e-be3c4324d931: # Rayco Haex Portfolio - nl
     enabledByDefault: true
     hasUrls: true
-    template: cases/_entry
-    uriFormat: 'cases/{slug}'
+    template: cases\_entry
+    uriFormat: cases
   00849864-7026-4356-a68a-4787547a8d4f: # Rayco Haex Portfolio
     enabledByDefault: true
     hasUrls: true
-    template: cases/_entry
-    uriFormat: 'cases/{slug}'
-type: channel
+    template: cases\_entry
+    uriFormat: cases
+type: single

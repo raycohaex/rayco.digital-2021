@@ -1,0 +1,15 @@
+{% extends "layouts/_base.twig" %}
+{# query #}
+{% set section = entry.getSection('cases') %}
+{% set entries = craft.entries.section(section).all() %}
+
+{% block body %}
+<div class="entry-content section section--light">
+</div><!-- Filler -->
+<section class="section section--light">
+
+</section>
+<div class="entry-content section section--light">
+</div><!-- Filler -->
+
+{% endblock %}

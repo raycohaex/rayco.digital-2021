@@ -1,13 +1,35 @@
 {% extends "layouts/_base.twig" %}
 {# query #}
-{% set section = entry.getSection() %}
-{% set entry = craft.entries.section(section).one() %}
-{% set tag = craft.tags.search('featured').one() %}
+{% set myEntryQuery = craft.entries()
+    .section('case')
+    .limit(10) %}
+{% set entries = myEntryQuery.all() %}
 
 {% block body %}
 <div class="entry-content section section--light">
 </div><!-- Filler -->
-hi
+<section class="section section--light">
+    <div class="container">
+        <h1 class="page-intro-title">Cases</h1>
+        <div class="portfolio-items">
+            {% for block in entries %}
+                <div class="portfolio-items__item">
+                <a href="{{block.url}}">
+                {% for asset in block.projectThumbnail %}
+                <div class="image-wrapper ">
+                    <img src="{{ asset.url }}" alt="{{asset.title}} - Project Thumbnail">
+                </div>
+                {% endfor %}
+                </a>
+                {% for categories in block.projectCategory %}
+                <small><a href="{{categories.url}}">{{categories.title}}</a></small>
+                {% endfor %}
+                <a class="a-unstyled" href="{{block.url}}"><h3>{{ block.caseName }}</h3></a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 <div class="entry-content section section--light">
 </div><!-- Filler -->
 

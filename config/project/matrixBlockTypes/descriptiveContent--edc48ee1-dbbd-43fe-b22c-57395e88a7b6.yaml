@@ -1,0 +1,142 @@
+field: 63de5a5e-68e8-4001-9f02-f937bad178d3 # Project breakdown
+fieldLayouts:
+  0108c5da-172f-44af-9204-9198ce8ba568:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5663c37e-3a6e-41d5-a5fe-d45a68ef9e43 # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+          -
+            fieldUid: a651faf6-59fa-4d08-9258-1b12e2e25443 # Dark section
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 36a7ed8c-bc0a-488f-a16b-803f379a2f74 # Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4f1e0d8c-b437-485b-9b95-8c3d873586a8 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4f1e0d8c-b437-485b-9b95-8c3d873586a8: # Image
+    contentColumnType: string
+    fieldGroup: null
+    handle: two_image
+    instructions: ''
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:391df726-69a9-45b1-b5bc-38e31475940b' # Project images
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:391df726-69a9-45b1-b5bc-38e31475940b' # Project images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  36a7ed8c-bc0a-488f-a16b-803f379a2f74: # Content
+    contentColumnType: text
+    fieldGroup: null
+    handle: two_content
+    instructions: ''
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  5663c37e-3a6e-41d5-a5fe-d45a68ef9e43: # Title
+    contentColumnType: text
+    fieldGroup: null
+    handle: two_title
+    instructions: ''
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  a651faf6-59fa-4d08-9258-1b12e2e25443: # Dark section
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: two_darksection
+    instructions: ''
+    name: 'Dark section'
+    searchable: false
+    settings:
+      default: false
+      offLabel: Dark
+      onLabel: Light
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: descriptiveContent
+name: 'Descriptive content'
+sortOrder: 2

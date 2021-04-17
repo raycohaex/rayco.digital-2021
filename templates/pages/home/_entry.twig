@@ -14,15 +14,22 @@
             <div class="job-experience">
             <div class="achievement-section">
                 <div class="achievement-section__achievement">
-                    <span class="achievement-section__achievement__year">2</span>
+                    {% set minimumYear = 2019 %}
+                    {% set currentYear = "now"|date("Y") %}  
+                    {% set yearDiff = (currentYear - minimumYear) %}
+                    <span class="achievement-section__achievement__year">{{yearDiff}}</span>
                     <span class="achievement-section__achievement__description">{{ 'years of experience'|t }}</span>
                 </div>
                 <div class="achievement-section__achievement">
-                    <span class="achievement-section__achievement__year">11</span>
+                    {% set webCat = craft.categories.search('website').one() %}
+                    {% set websites = craft.entries.relatedTo(webCat).total %}
+                    <span class="achievement-section__achievement__year">{{websites}}</span>
                     <span class="achievement-section__achievement__description">{{ 'websites built'|t }}</span>
                 </div>
                 <div class="achievement-section__achievement">
-                    <span class="achievement-section__achievement__year">2</span>
+                    {% set appCat = craft.categories.search('webapp').one() %}
+                    {% set webapps = craft.entries.relatedTo(appCat).total %}
+                    <span class="achievement-section__achievement__year">{{webapps}}</span>
                     <span class="achievement-section__achievement__description">{{ 'webapps built'|t }}</span>
                 </div>
             </div>
@@ -32,7 +39,8 @@
             </div>
         </div>
         <div class="anti-section__3">
-            <a href="#" class="btn btn--pop margin-auto">{{ 'Work'|t }} <svg viewBox="0 0 24 24" class="icon icon__chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                {% set casesUrl = craft.entries.search('cases').one %}
+            <a href="{{casesUrl.url}}" class="btn btn--pop margin-auto">{{ 'Work'|t }} <svg viewBox="0 0 24 24" class="icon icon__chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
         </div>
         
     </div>
@@ -73,7 +81,7 @@
         {% set cases = craft.entries.relatedTo(tag).all %}
             {% for block in cases %}
                 <div class="portfolio-items__item">
-                <a href="//{{block.url}}">
+                <a href="{{block.url}}">
                 {% for asset in block.projectThumbnail %}
                 <div class="image-wrapper ">
                     <img src="{{ asset.url }}" alt="{{asset.title}} - Project Thumbnail">
@@ -81,18 +89,21 @@
                 {% endfor %}
                 </a>
                 {% for categories in block.projectCategory %}
-                <small><a href="//{{categories.url}}">{{categories.title}}</a></small>
+                <small><a href="{{categories.url}}">{{categories.title}}</a></small>
                 {% endfor %}
-                <a class="a-unstyled" href="//{{block.url}}"><h3>{{ block.caseName }}</h3></a>
+                <a class="a-unstyled" href="{{block.url}}"><h3>{{ block.caseName }}</h3></a>
                 </div>
             {% endfor %}
         </div>
     </div>
     <div id="portfolio-more-work-cta">
+        {# casesUrl already called #}
+        <a href="{{casesUrl.url}}">
         <div id="portfolio-more-work-cta__content">
             {{ 'View all my projects'|t }}
         </div>
         <img src="{{ alias('@web') }}/assets/images/waves-min.jpg" alt="Wavy Pattern Portfolio CTA">
+        </a>
     </div>
 </section><!-- End project section -->
 <div class="entry-content section section--light">
