@@ -11,7 +11,9 @@
     }
 }
 
-.section {
+.section,
+.anti-section {
+    position: relative;
     h1,
     h2, 
     h3,

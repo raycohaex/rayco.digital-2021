@@ -60,13 +60,16 @@
     @include flex;
     flex-direction: column;
     margin: auto;
-    padding: 25px;
+    padding: 30px 45px;
     position: relative;
     &.container--no-padding {
         padding: unset;
     }
     &.container--no-column {
         flex-direction: row;
+    }
+    &.container--mimic-section-margin {
+        margin: 0 13rem;
     }
     p {
         max-width: 75ch;

@@ -47,3 +47,55 @@
     }
     }
 }
+
+.portfolio-items {
+    @include flex;
+    flex-wrap: wrap;
+    .portfolio-items__item {
+        small {
+            font-size: $smallbody;
+        }
+        margin-top: 60px;
+        flex: 50% 0 1;
+        padding: 0 48px;
+        &:first-child
+        {
+            margin-top: 0;
+        }
+        img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+    }
+}
+
+#portfolio-more-work-cta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 550px;
+    width: calc(50% - 48px);
+    #portfolio-more-work-cta__content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        padding: 40px;
+        z-index: 2;
+        background-color: rgba($pop, 0.92);
+        font-family: $primaryfont;
+        color: $white;
+        font-weight: 700;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+}

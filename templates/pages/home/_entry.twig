@@ -1,11 +1,12 @@
 {% extends "layouts/_base.twig" %}
 {# query #}
 {% set entry = craft.entries.section('homepage').one() %}
+{% set tag = craft.tags.search('featured').one() %}
 
 {% block body %}
 <div class="entry-content section section--light">
-</div>
-<section class="anti-section anti-section--light overflow-hidden">
+</div><!-- Filler -->
+<section class="anti-section anti-section--light overflow-hidden"><!-- Intro section -->
     <div class="container container--no-padding container--no-column">
         <div class="anti-section__1-2" id="intro-text">
             <h1 class="jumbo-text flex-50">{{entry.slogan}}</h1>
@@ -34,24 +35,24 @@
         </div>
         
     </div>
-</section>
-<section class="anti-section anti-section--light overflow-hidden">
+</section><!-- End intro section -->
+<section class="anti-section anti-section--light overflow-hidden"><!-- Image section -->
     <div class="image-wrapper" id="image-amsterdam-homepage">
         <img src="{{ alias('@web') }}/assets/images/amsterdam.jpg" alt="Amsterdam Homepage Image">
     </div>
-</section>
-<section class="section section--light">
+</section><!-- End image section -->
+<section class="section section--light"><!-- About me section -->
     <div class="container">
         <h2>About Me</h2>
         {{entry.aboutMe}}
     </div>
-</section>
-<section class="section section--light">
+</section><!-- End about me section -->
+<section class="section section--light"><!-- Skill section -->
     <div class="container">
         <h2>My Fullstack Skillset</h2>
         {% if entry.skills|length %} 
             <div class="skills">
-            {% for block in entry.skills.type('matrixSkill') %}
+            {% for block in entry.skills.type('matrixSkill').all() %}
                 <div class="skills__skill">
                     <div class="skills__skill__skill-index">0{{loop.index}}/</div>
                     <div class="skills__skill__content">
@@ -63,12 +64,37 @@
             </div>
         {% endif %}
     </div>
-</section>
-<section class="section section--light">
-    <div class="container">
+</section><!-- End skill section -->
+<section class="anti-section anti-section--light"><!-- Project section -->
+    <div class="container container--mimic-section-margin">
         <h2>Projects I'm especially proud of!</h2>
-        wip
+        <div class="portfolio-items">
+        {% set cases = craft.entries.relatedTo(tag).all %}
+            {% for block in cases %}
+                <div class="portfolio-items__item">
+                <a href="//{{block.url}}">
+                {% for asset in block.projectThumbnail %}
+                <div class="image-wrapper ">
+                    <img src="{{ asset.url }}" alt="{{asset.title}} - Project Thumbnail">
+                </div>
+                {% endfor %}
+                </a>
+                {% for categories in block.projectCategory %}
+                <small><a href="//{{categories.url}}">{{categories.title}}</a></small>
+                {% endfor %}
+                <a class="a-unstyled" href="//{{block.url}}"><h3>{{ block.caseName }}</h3></a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-</section>
+    <div id="portfolio-more-work-cta">
+        <div id="portfolio-more-work-cta__content">
+            View all my projects
+        </div>
+        <img src="{{ alias('@web') }}/assets/images/waves-min.jpg" alt="Wavy Pattern Portfolio CTA">
+    </div>
+</section><!-- End project section -->
+<div class="entry-content section section--light">
+</div><!-- Filler -->
 
 {% endblock %}

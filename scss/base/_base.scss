@@ -29,6 +29,9 @@ a {
     &:focus {
         color: $pop;
     }
+    &.a-unstyled {
+        color: $dark;
+    }
 }
 
 .icon {
