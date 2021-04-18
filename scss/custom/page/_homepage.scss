@@ -9,6 +9,7 @@
         margin-bottom: 3.125rem;
         .achievement-section__achievement {
             display: flex;
+            padding: 0 10px;
             flex-direction: column;
             .achievement-section__achievement__year {
                 color: $pop;
@@ -29,9 +30,15 @@
     flex-wrap: wrap;
     .skills__skill {
         flex: 50% 0;
+        @include s-desktop () {
+            flex: 100% 0;
+        }
         @include flex;
         margin-bottom: 1.75rem;
         padding-right: 3rem;
+        @include mobile () {
+            padding-right: 0;
+        }
     .skills__skill__skill-index {
         font-family: $primaryfont;
         font-size: $smallheading;
@@ -39,10 +46,18 @@
         color: rgba($dark, 0.3);
         margin-right: 1.5rem;
         flex: 3ch 0 0;
+        @include mobile () {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+            margin-top: 0.15rem;
+        }
     }
     .skills__skill__content{
         h3 {
             font-size: $smallheading;
+            @include mobile() {
+                font-size: #{$smallheading / 1.6};
+            }
         }
     }
     }
@@ -54,20 +69,40 @@
     .portfolio-items__item {
         small {
             font-size: $smallbody;
+            @include mobile() {
+                font-size: 14px;
+            }
         }
         margin-top: 60px;
         flex: 50% 0 1;
         padding: 0 48px;
+        @include s-desktop() {
+            flex: 100% 0 1;
+            padding: 0 8px;
+            &:last-child {
+                margin-bottom: 150px;
+            }
+        }
         &:first-child
         {
             margin-top: 0;
         }
+        h3 {
+            font-size: 20px;
+        }
         img {
             width: 100%;
             height: 550px;
+            @include desktop () {
+                height: 350px;
+            }
             object-fit: cover;
         }
     }
+}
+
+#intro-text {
+    margin-left: 7rem;
 }
 
 #portfolio-more-work-cta {
@@ -75,6 +110,16 @@
     right: 0;
     bottom: 0;
     height: 550px;
+    @include desktop () {
+        height: 350px;
+    }
+    @include s-desktop () {
+        height: unset;
+    }
+    @include mobile() {
+        width: 70%;
+        font-size: 20px;
+    }
     width: calc(50% - 48px);
     #portfolio-more-work-cta__content {
         position: relative;
@@ -97,5 +142,47 @@
         bottom: 0;
         right: 0;
         z-index: 1;
+    }
+}
+
+@include desktop() {
+    .job-experience {
+        margin: 30px 7rem 0;
+        max-width: 50%;
+    }
+    #intro-text {
+        margin: 0 3.5rem;
+    }
+}
+@include s-desktop() {
+    .job-experience {
+        max-width: unset;
+    }
+    #intro-text {
+        margin: 0 1.5rem;
+        max-width: 80%;
+    }
+    .image-wrapper {
+        &#image-amsterdam-homepage {
+            width: 70%;
+            height: 300px;
+            margin: 4rem 0 2rem auto;
+        }
+    }
+}
+@include mobile() {
+    .job-experience {
+        margin: 30px 0 0 0.5rem;
+    }
+    #intro-text {
+        margin: 0 0.5rem;
+        max-width: 70vw;
+    }
+    .image-wrapper {
+        &#image-amsterdam-homepage {
+            width: 100%;
+            height: 300px;
+            margin: 4rem 0;
+        }
     }
 }

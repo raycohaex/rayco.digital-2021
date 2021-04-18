@@ -3,6 +3,14 @@
     line-height: $jumbo;
     font-weight: 600;
     font-family: $mheadfont;
+    @include s-desktop() {
+        font-size: #{$jumbo / 1.1};
+        line-height: #{$jumbo / 1.1};
+    }
+    @include mobile() {
+        font-size: #{$jumbo / 1.7};
+        line-height: #{$jumbo / 1.7};
+    }
 }
 
 .block-text {
@@ -31,6 +39,9 @@
 
     h2 {
         font-size: $heading;
+        @include mobile() {
+        font-size: #{$heading / 1.8};
+        }
         margin-bottom: 3rem;
         margin-top: 2rem;
         max-width: 50%;
@@ -38,7 +49,15 @@
 
 }
 
+@include mobile() {
+    .anti-section,
+    .section {
+        h2 {
+            max-width: 100%;
+        }
+    }
+}
+
 .section .page-intro-title {
-    font-size: $jumbo;
     margin: 0 0 6rem;
 }

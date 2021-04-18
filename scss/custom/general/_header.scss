@@ -80,3 +80,70 @@
     }
 
 }
+
+@include desktop() {
+    .site-menu {
+        #site-logo {
+            width: 5ch;
+            margin: auto;
+        }
+        .navbar {
+            .navbar__left {
+                width: 7rem;
+            }
+            .navbar__center {
+                .navbar-links {
+                    display: none;
+                }
+            }
+            .navbar__right {
+                width: 7rem;
+            }
+        }
+        .language-options {
+            width: 7rem;
+        }
+    }
+}
+
+@include s-desktop() {
+    .site-menu {
+        .navbar {
+            .navbar__left {
+                width: 5rem;
+            }
+            .navbar__center {
+                .navbar-links {
+                    display: none;
+                }
+            }
+            .navbar__right {
+                width: 5rem;
+            }
+        }
+        .language-options {
+            width: 5rem;
+        }
+    }
+}
+
+@include mobile() {
+    .site-menu {
+        .navbar {
+            .navbar__left {
+                display: none;
+            }
+            .navbar__center {
+                .navbar-links {
+                    display: none;
+                }
+            }
+            .navbar__right {
+                width: 3.5rem;
+            }
+        }
+        .language-options {
+            width: 3.5rem;
+        }
+    }
+}

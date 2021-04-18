@@ -1,11 +1,28 @@
 .contact-options {
     display: flex;
+    @include mobile() {
+        flex-direction: column;
+    }
     .contact-options__option {
+        @include s-desktop() {
+            flex: 50% 0 1;
+            padding: 0 20px;
+        }
+        @include mobile() {
+            margin-bottom: 30px;
+            padding: 0;
+        }
         h3 {
             font-size: $smallbody;
             color: rgba($white, 0.4);
             width: 20ch;
             font-family: $primaryfont;
+            @include s-desktop() {
+                width: 100%;
+            }
+            @include mobile() {
+                width: 15ch;
+            }
         }
         .contact-options__option__phone {
             font-size: $smallbody;

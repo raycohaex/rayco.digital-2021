@@ -1,7 +1,17 @@
 .section {
     margin: 0 13rem;
+    ol {
+        margin: 10px 0 0 2ch;
+        font-size: 1.25rem;
+        li {
+            font-size: inherit;
+        }
+    }
     &.section--spacing {
-        padding: 130px 0;
+        padding: 130px 20px;
+        @include mobile() {
+            padding: 50px 0;
+        }
     }
     p {
         max-width: 75ch;
@@ -9,17 +19,33 @@
     &.section--light {
         border-left: 5px solid rgba($dark, 0.08);
         border-right: 5px solid rgba($dark, 0.08);
+        @include mobile() {
+            border-left: none;
+        }
     }
     &.section--dark {
         border-left: 5px solid rgba($white, 0.08);
         border-right: 5px solid rgba($white, 0.08);
         color: $white;
+        @include mobile() {
+            border-left: none;
+        }
     }
 }
 
 .anti-section {
+    ol {
+        margin: 10px 0 0 2ch;
+        font-size: 1.25rem;
+        li {
+            font-size: inherit;
+        }
+    }
     &.anti-section--spacing {
-        padding: 130px 20;
+        padding: 130px 20px;
+        @include mobile() {
+            padding: 50px 0;
+        }
     }
     p {
         max-width: 75ch;
@@ -35,11 +61,15 @@
         left: 0;
         margin: 0 13rem;
         z-index: -1;
+        
     }
     &.anti-section--light {
         &::after{
             border-left: 5px solid rgba($dark, 0.08);
             border-right: 5px solid rgba($dark, 0.08);
+            @include mobile() {
+                border-left: none;
+            }
             z-index: 1;
         }
     }
@@ -47,7 +77,46 @@
         &::after{
         border-left: 5px solid rgba($white, 0.08);
         border-right: 5px solid rgba($white, 0.08);
+        @include mobile() {
+            border-left: none;
+        }
         z-index: 1;
+        }
+    }
+}
+
+@include desktop() {
+    .section {
+        margin: 0 7rem;
+    }
+    .anti-section {
+        &::after{
+            margin: 0 7rem;
+            width: calc(100% - (14rem + 10px));
+        }
+    }
+}
+
+@include s-desktop() {
+    .section {
+        margin: 0 5rem;
+    }
+    .anti-section {
+        &::after{
+            margin: 0 5rem;
+            width: calc(100% - (10rem + 10px));
+        }
+    }
+}
+
+@include mobile() {
+    .section {
+        margin: 0 3.5rem 0 0;
+    }
+    .anti-section {
+        &::after{
+            margin: 0 3.5rem 0 0;
+            width: calc(100% - (3.5rem + 5px));
         }
     }
 }
@@ -60,6 +129,12 @@
 
 .entry-content {
     height: 150px;
+    @include s-desktop {
+        height: 110px;
+    }
+    @include mobile {
+        height: 40px;
+    }
 }
 
 .anti-section__1-2 {
@@ -72,11 +147,45 @@
     @include flex;
 }
 
+@include desktop {
+    .anti-section__3 {
+        width: 7rem;
+    }
+    .anti-section__1-2 {
+        flex-direction: column;
+    }
+}
+
+@include s-desktop {
+    .anti-section__3 {
+        width: 5rem;
+        display: none;
+    }
+}
+
+@include mobile {
+    .anti-section__3 {
+        width: 3.5rem;
+        display: none;
+    }
+}
+
 .container {
     @include flex;
     flex-direction: column;
     margin: auto;
-    padding: 30px 45px;
+    @include l-desktop () {
+        padding: 30px 45px;
+    }
+    @include desktop () {
+        padding: 30px 25px;
+    }
+    @include s-desktop () {
+        padding: 30px 15px;
+    }
+    @include mobile () {
+        padding: 30px 8px;
+    }
     position: relative;
     &.container--no-padding {
         padding: unset;
@@ -85,21 +194,21 @@
         flex-direction: row;
     }
     &.container--mimic-section-margin {
-        margin: 0 13rem;
+        
+        @include l-desktop () {
+            margin: 0 13rem;
+        }
+        @include desktop () {
+            margin: 0 7rem;
+        }
+        @include s-desktop () {
+            margin: 0 5rem;
+        }
+        @include mobile () {
+            margin: 0 3.5rem 0 0;
+        }
     }
     p {
         max-width: 75ch;
-    }
-}
-
-@include s-desktop {
-    .container {
-        max-width: 840px;
-    }
-}
-
-@include mobile {
-    .container {
-        max-width: 100%;
     }
 }
