@@ -79,7 +79,16 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
+          -
+            fieldUid: 477338c6-f31f-4cae-a064-91546d6b0c53 # Project Large image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
           -
             fieldUid: 63de5a5e-68e8-4001-9f02-f937bad178d3 # Project breakdown
             instructions: null

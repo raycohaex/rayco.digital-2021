@@ -1,5 +1,11 @@
 .section {
     margin: 0 13rem;
+    &.section--spacing {
+        padding: 130px 0;
+    }
+    p {
+        max-width: 75ch;
+    }
     &.section--light {
         border-left: 5px solid rgba($dark, 0.08);
         border-right: 5px solid rgba($dark, 0.08);
@@ -12,6 +18,12 @@
 }
 
 .anti-section {
+    &.anti-section--spacing {
+        padding: 130px 20;
+    }
+    p {
+        max-width: 75ch;
+    }
     position: relative;
     &::after{ 
         content: '';
@@ -28,18 +40,22 @@
         &::after{
             border-left: 5px solid rgba($dark, 0.08);
             border-right: 5px solid rgba($dark, 0.08);
+            z-index: 1;
         }
     }
     &.anti-section--dark {
         &::after{
         border-left: 5px solid rgba($white, 0.08);
         border-right: 5px solid rgba($white, 0.08);
+        z-index: 1;
         }
     }
 }
 
 .section-wrapper--dark {
     background-color: $dark;
+    @include flex;
+    flex-direction: column;
 }
 
 .entry-content {
@@ -48,12 +64,12 @@
 
 .anti-section__1-2 {
     flex: 1;
-    display: flex;
+    @include flex;
 }
 
 .anti-section__3 {
     width: 13rem;
-    display: flex;
+    @include flex;
 }
 
 .container {

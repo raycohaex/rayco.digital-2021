@@ -11,7 +11,10 @@ body {
     font-size: $body;
     font-family: $blockfont;
     color: $dark;
-    background: $white;
+}
+
+body, html{
+    background-color: $white;
 }
 
 *::selection {
