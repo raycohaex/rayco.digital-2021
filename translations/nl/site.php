@@ -11,5 +11,8 @@ return [
     'View all my projects' => "Bekijk al mijn projecten",
     'Contact' => "Contact",
     'For employers & internships' => "Voor werkgevers en stage-aanbod",
-    'For commissions and recruiters' => "Voor opdrachtgevers en recruiters"
+    'For commissions and recruiters' => "Voor opdrachtgevers en recruiters",
+    'Home' => 'Home',
+    'My Work' => 'Mijn Werk',
+    'Cases' => 'Projecten'
 ];
