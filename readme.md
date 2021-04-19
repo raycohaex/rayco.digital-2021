@@ -16,18 +16,21 @@ Final product can be found at [https://rayco.digital](https://rayco.digital)
 ## Installation
 
 Run this project in a development environment. I use Laragon.
-
 Configure the .env file to your needs and remove the `.example`.
-Then run:
+Open the browser and go to <siteaddress>/admin/install to run the Craft CMS installation.
+
+Then run in order:
 ```bash
+composer install
+php craft migrate/up
 npm install
 ```
 
 ## Gulp commands
 
 ```bash
-$gulp style #Runs the Gulp pipeline once
-$gulp watch #Runs the Gulp pipeline on change for twig and scss changes.
+gulp style #Runs the Gulp pipeline once
+gulp watch #Runs the Gulp pipeline on change for twig and scss changes.
 ```
 
 ## License
