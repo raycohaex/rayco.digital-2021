@@ -8,13 +8,18 @@
     font-family: $primaryfont;
     flex-direction: column;
     z-index: 999;
+    mix-blend-mode: difference;
     #site-logo {
         display: flex;
         justify-content: center;
         font-size: $small;
-        @include href-unstyled;
         pointer-events: all;
         font-weight: 700;
+        color: transparent;
+        background-color: $white;
+        background-clip: text;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
     }
     .navbar {
         @include flex;
@@ -64,17 +69,21 @@
         margin-top: 20px;
         li {
             a {
+                color: transparent;
                 text-transform: uppercase;
-                color: rgba($dark, 0.5);
+                background-color: rgba($white, 0.5);
                 font-size: $small;
                 pointer-events: all;
+                background-clip: text;
+                -moz-background-clip: text;
+                -webkit-background-clip: text;
             }
         }
         li:first-child {
         }
         li.is-active {
             a {
-                color: $dark;
+                background-color: $white;
             }
         }
     }
@@ -108,7 +117,7 @@
     &.menu-icon--dark {
         .menu-icon__top,
         .menu-icon__bottom {
-        background: $dark;
+        background: $white;
         }
     }
     &:hover {

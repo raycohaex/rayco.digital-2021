@@ -1,0 +1,14 @@
+contentColumnType: string(255)
+fieldGroup: c5025c67-2da7-4194-9ccc-8e4660bd4118 # project
+handle: liveVersion
+instructions: ''
+name: 'Live Version'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

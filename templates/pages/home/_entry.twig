@@ -23,13 +23,13 @@
                 <div class="achievement-section__achievement">
                     {% set webCat = craft.categories.search('website').one() %}
                     {% set websites = craft.entries.relatedTo(webCat).total %}
-                    <span class="achievement-section__achievement__year">{{websites}}</span>
+                    <span class="achievement-section__achievement__year">{{websites}}+</span>
                     <span class="achievement-section__achievement__description">{{ 'websites built'|t }}</span>
                 </div>
                 <div class="achievement-section__achievement">
                     {% set appCat = craft.categories.search('webapp').one() %}
                     {% set webapps = craft.entries.relatedTo(appCat).total %}
-                    <span class="achievement-section__achievement__year">{{webapps}}</span>
+                    <span class="achievement-section__achievement__year">{{webapps}}+</span>
                     <span class="achievement-section__achievement__description">{{ 'webapps built'|t }}</span>
                 </div>
             </div>

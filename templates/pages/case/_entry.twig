@@ -8,9 +8,11 @@
             <h1 class="article__header__content__title">{{ entry.caseName }}</h1>
             <div class="article__header__content__description">{{ entry.projectContent }}</div>
         </div>
+        {% if (entry.projectLargeImage.first()) %}
         <figure class="article__header__figure">
             <img src="{{ entry.projectLargeImage.first().url }}" alt="{{entry.title}} - case image">
         </figure>
+        {% endif %}
     </header>
     {% for block in entry.projectBreakdown %}
         {% set colorMode = block.two_darksection %}
@@ -19,18 +21,30 @@
         {% else %}
         <div class="section-wrapper--dark section--spacing">
             <section class="section section--dark">
-            {% endif %}
+        {% endif %}
             
-            <div class="container">
             {% if block.type == 'descriptiveContent' %}
-            <h2>{{ block.two_title }}</h2>
-
-            {{ block.two_content }}
-            {{ block.two_image.first() }}
+                {% if block.two_image.first() %}
+                <div class="container container--split">
+                    <div class="column column--half">
+                        <h2>{{ block.two_title }}</h2>
+                        {{ block.two_content }}
+                    </div>
+                    <div class="column column--half column--image">
+                        <img src="{{ block.two_image.first().url }}" alt="{{ block.two_title }}">
+                    </div>
+                </div>
+                {% else %}
+                <div class="container">
+                    <h2>{{ block.two_title }}</h2>
+                    {{ block.two_content }}
+                </div>
+                {% endif %}
             {% elseif block.type == 'largeImage' %}
-            LI
+                {% if block.one_imageAsset.first() %}
+                    <img class="large-article-image" src="{{ block.one_imageAsset.first().url }}" alt="{{ block.one_imageTitle }}">
+                {% endif %}
             {% endif %}
-            </div>
             </section>
         {% if colorMode == true %}
         </div>
