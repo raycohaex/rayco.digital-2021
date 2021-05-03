@@ -18,7 +18,7 @@ function style() {
         .pipe(autoPrefixer())
         .pipe(minCss())
         .pipe(rename({ extname: '.min.css'}))
-        .pipe(gulp.dest('./web/assets/css'))
+        .pipe(gulp.dest('./public/assets/css'))
         .pipe(browserSync.stream());
 }
 

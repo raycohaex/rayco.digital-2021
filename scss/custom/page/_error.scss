@@ -1,0 +1,82 @@
+#error-404-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+.error-404{
+    animation: glitch 1s linear infinite;
+    font-size: 10rem;
+    color: $pop;
+    font-weight: 600;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  .error-404:before,
+  .error-404:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    mix-blend-mode: color-burn;
+  }
+  
+  .error-404:after{
+    color: #ff0055;
+  }
+  .error-404:before{
+    color: #00c3ff;
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 53%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 53%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+      opacity: 0;
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+      opacity: 0;
+    }
+    62%{
+      opacity: 1;
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  .error-404:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 27%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 27%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+      opacity: 0;
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+      opacity: 0;
+    }
+    62%{
+      opacity: 1;
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }

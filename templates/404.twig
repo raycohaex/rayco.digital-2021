@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 
+-*  Hey!
+-*  The CMS used is Craft CMS
+-*  You can see how this site is built in my Git https://github.com/raycohaex/rayco.digital
+-*  Want to talk about job opportunities or do you just have general questions?
+-*  📧 info@rayco.digital
+-*  Or connect to me on LinkedIn 👉 https://www.linkedin.com/in/rayco-haex/ 👈
+-->
+<html lang="{{craft.app.language}}">
+<head>
+  <meta charset="utf-8">
+
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+    <meta name="description" content="Fullstack Webdeveloper Portfolio">
+    <meta name="author" content="Rayco Haex">
+    <meta name="keywords" content="Fullstack web developer, web developer, portfolio, Craft CMS, WordPress, Laravel, PHP, developer">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{alias('@web')}}/assets/favicon//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{alias('@web')}}/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{alias('@web')}}/assets/favicon//favicon-16x16.png">
+    <link rel="manifest" href="{{alias('@web')}}/assets/favicon//site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    {% css "/assets/css/style.min.css" %}
+
+</head>
+
+<body>
+        <div class="container" id="error-404-container">
+            <div class="error-404" title="404">404</div>
+            <span>{{ "This page or file can't be found" | t}}</span>
+            <a class="btn btn--pop margin-auto" href="{{craft.app.sites.primarySite.baseUrl}}">{{ "Return to home" | t}}</a>
+        </div>
+
+    {% js "/assets/js/main.js" %}
+
+</body>
+</html>
+

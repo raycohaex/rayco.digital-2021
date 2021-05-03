@@ -22,10 +22,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     /* ---------------- **
     ** Three.js 3d  🤘  **
     **----------------- */
-    const app = new SpeRuntime.Application();
-    if( window.innerWidth <= 800 ){
-        app.start('/assets/js/scene-mobile.json');
-    } else {
-        app.start('/assets/js/scene.json');
+    if(typeof SpeRuntime != 'undefined'){
+        const app = new SpeRuntime.Application();
+        if( window.innerWidth <= 800 ){
+            app.start('/assets/js/scene-mobile.json');
+        } else {
+            app.start('/assets/js/scene.json');
+        }
     }
 });
