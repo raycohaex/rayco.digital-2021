@@ -67,11 +67,24 @@
     @include flex;
     flex-wrap: wrap;
     .portfolio-items__item {
+        position: relative;
         small {
             font-size: $smallbody;
             @include mobile() {
                 font-size: 14px;
             }
+        }
+        .portfolio-items__item__award {
+            position: absolute;
+            z-index: 55;
+            background: $pop;
+            color: $white;
+            right: 80px;
+            top: 30px;
+            padding: 10px;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 20px;
         }
         margin-top: 60px;
         flex: 50% 0 1;
@@ -162,13 +175,6 @@
         margin: 0 1.5rem;
         max-width: 80%;
     }
-    .image-wrapper {
-        &#image-amsterdam-homepage {
-            width: 70%;
-            height: 300px;
-            margin: 4rem 0 2rem auto;
-        }
-    }
 }
 @include mobile() {
     .job-experience {
@@ -178,11 +184,22 @@
         margin: 0 0.5rem;
         max-width: 70vw;
     }
-    .image-wrapper {
-        &#image-amsterdam-homepage {
-            width: 100%;
-            height: 300px;
-            margin: 4rem 0;
-        }
+}
+
+#canvas3d {
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤘</text></svg>") 16 0,auto;
+    height: 650px !important;
+    width: 650px !important;
+    position: absolute;
+    z-index: 555;
+    top: -197px;
+    mix-blend-mode: darken;
+    @include mobile() {
+        height: 500px !important;
+        width: 450px !important;
+        top: -117px;
+        left: -80px;
     }
 }
+
+

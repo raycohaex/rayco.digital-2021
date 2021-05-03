@@ -1,10 +1,29 @@
 .image-wrapper{
     position: relative;
-    &#image-amsterdam-homepage{
-        width: 70%;
-        height: 400px;
+    &#rock-on-homepage{
+        width: 90%;
+        height: 250px;
         display: flex;
         margin: 5.5rem 0 5.5rem auto;
+        z-index: 1;
+        @media (max-width: 800px) {
+            &:before {
+                content: 'Taphold';
+                z-index: 999;
+                position: absolute;
+                bottom: 20px;
+                right: 25px;
+                font-size: 2.5rem;
+                color: #252525;
+                font-family: 'Montserrat';
+                font-weight: 900;
+                pointer-events: none;
+            }
+            &:hover:before {
+                content: 'Rock on! :)';
+            }
+
+        }
     }
     &:after {
         content: '';
@@ -16,6 +35,14 @@
         z-index: 5;
         left: 0;
         top: 0;
+        mix-blend-mode: screen;
+        transition: background 200ms;
+    }
+    &:hover:after {
+        background: $pop;
+    }
+    &#rock-on-homepage:after {
+        background: #f3f3f3;
     }
     img {
         object-fit: cover;

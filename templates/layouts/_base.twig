@@ -35,6 +35,13 @@
 
     {% endblock %}
     {% include 'includes/footer.twig' %}
+    {% if entry is defined %}
+    {% if entry.uri == "__home__" %}
+      {% js "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" %}
+      {% js "https://cdn.spline.design/lib/anime.min.js" %}
+      {% js "/assets/js/three.runtime.min.js" %}
+    {% endif %}
+    {% endif %}
     {% js "/assets/js/main.js" %}
 
 </body>

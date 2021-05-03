@@ -33,11 +33,11 @@ name: projects
 siteSettings:
   0ec2446b-1221-435c-9e4e-be3c4324d931: # Rayco Haex Portfolio - nl
     hasUrls: true
-    template: null
+    template: pages/case/
     uriFormat: 'projects/{slug}'
   00849864-7026-4356-a68a-4787547a8d4f: # Rayco Haex Portfolio
     hasUrls: true
-    template: null
+    template: pages/case/
     uriFormat: 'projects/{slug}'
 structure:
   maxLevels: null

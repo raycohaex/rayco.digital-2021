@@ -37,7 +37,7 @@
         line-height: #{$smallbody * 1.54};
     }
 
-    h2 {
+    h2{
         font-size: $heading;
         @include mobile() {
         font-size: #{$heading / 1.8};
@@ -45,8 +45,17 @@
         margin-bottom: 3rem;
         margin-top: 2rem;
         max-width: 50%;
+        &.full-width {
+            max-width: unset;
+        }
     }
 
+}
+
+#copyright-notice {
+    font-size: 12px;
+    opacity: 0.4;
+    margin-top: 50px;
 }
 
 @include mobile() {

@@ -1,18 +1,14 @@
 {% extends "layouts/_base.twig" %}
-{# query #}
-{% set myEntryQuery = craft.entries()
-    .section('case')
-    .limit(10) %}
-{% set entries = myEntryQuery.all() %}
 
 {% block body %}
+
 <div class="entry-content section section--light">
 </div><!-- Filler -->
 <section class="section section--light">
     <div class="container">
-        <h1 class="page-intro-title jumbo-text">{{ 'Cases'|t }}</h1>
+        <h1 class="page-intro-title jumbo-text">{{ 'Cases'|t }}: {{category.title}}</h1>
         <div class="portfolio-items">
-            {% for block in entries %}
+            {% for block in craft.entries.section('case').relatedTo({targetElement: category}) %}
                 <div class="portfolio-items__item">
                 {% if block.award %}
                     <a class="portfolio-items__item__award" rel="noreferrer" target="_BLANK" href="{{ block.award }}">Award winning</a>
@@ -35,5 +31,4 @@
 </section>
 <div class="entry-content section section--light">
 </div><!-- Filler -->
-
 {% endblock %}
