@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    /* --------------**
-    ** Menu controls **
-    **-------------- */
+    /* ---------------**
+    ** Menu controls  **
+    ** Custom written **
+    **--------------- */
 
    // change state of first found anchor
     let menuTrigger = () => {
@@ -16,5 +17,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let triggerList = document.querySelectorAll("[data-menu-trigger]");
     for (const [index, el] of triggerList.entries()) {
         el.addEventListener("click", menuTrigger);
+    }
+
+    /* ---------------- **
+    ** Three.js 3d  🤘  **
+    **----------------- */
+    const app = new SpeRuntime.Application();
+    if( window.innerWidth <= 800 ){
+        app.start('/assets/js/scene-mobile.json');
+    } else {
+        app.start('/assets/js/scene.json');
     }
 });
