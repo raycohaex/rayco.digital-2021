@@ -14,6 +14,19 @@
         </figure>
         {% endif %}
     </header>
+    {% if (entry.liveVersion | length > 0) or (entry.award | length > 0)%}
+    <section class="section section--light">
+        <div class="project-specifications">
+        {% if entry.liveVersion %}
+        <span>Live version: <a rel="noreferrer" target="_BLANK" href="{{ entry.liveVersion }}">{{ entry.liveVersion }}</a></span>
+        {% endif %}
+
+        {% if entry.liveVersion %}
+        <span>Award: <a rel="noreferrer" target="_BLANK" href="{{ entry.award }}">{{ entry.award }}</a></span>
+        {% endif %}
+        </div>
+    </section>
+    {% endif %}
     {% for block in entry.projectBreakdown %}
         {% set colorMode = block.two_darksection %}
         {% if colorMode == false %}

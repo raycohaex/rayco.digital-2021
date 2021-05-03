@@ -23,5 +23,5 @@ settings:
   showUnpermittedVolumes: false
   uiMode: enlarged
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\redactor\Field

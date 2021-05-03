@@ -1,0 +1,27 @@
+fieldLayouts:
+  84491503-88ad-4c82-a79e-670e424ccf74:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5446410f-ca34-4649-bac9-d3dcacc2a8e4 # cv url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 144e01f9-b2f1-4209-b339-7f48eee86b1a # cv url nl
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'cv info'
+        sortOrder: 1
+handle: cv
+name: CV
