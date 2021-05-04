@@ -17,6 +17,11 @@
     <meta name="keywords" content="Fullstack web developer, web developer, portfolio, Craft CMS, WordPress, Laravel, PHP, developer">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta property="og:locale" content="{{craft.app.language}}"/>
+    <meta property="og:property" content="website"/>
+    <meta property="og:title" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}"/>
+    <meta property="og:description" content="Rayco Haex Fullstack Web Developer"/>
+    <meta property="og:image" content="https://rayco.digital/assets/images/ogimage.jpg"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="{{alias('@web')}}/assets/favicon//apple-touch-icon.png">
